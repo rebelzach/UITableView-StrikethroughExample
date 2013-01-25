@@ -28,7 +28,6 @@
   
   [userOwnBookingDataSource addObject:bookingEntry1];
   [userOwnBookingDataSource addObject:bookingEntry2];
-  //[self.tableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
