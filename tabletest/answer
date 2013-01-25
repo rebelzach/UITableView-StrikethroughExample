@@ -1,0 +1,53 @@
+You can do this easily in iOS 6. Here is a working code sample. The strikethrough happens in the `tableView:cellForRowAtIndexPath:` method. You can download the project here https://github.com/rebelzach/UITableView-StrikethroughExample
+
+    @implementation TTViewController {
+      NSMutableArray *userOwnBookingDataSource;
+    }
+    
+    - (void)viewDidLoad
+    {
+      [super viewDidLoad];
+      if(userOwnBookingDataSource == nil)
+        userOwnBookingDataSource = [[NSMutableArray alloc]init];
+      
+      NSDictionary *bookingEntry1 = @{@"officeName":@"Office 1",
+                                     @"hallName":@"Hall 1",
+                                     NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)};
+      NSDictionary *bookingEntry2 = @{@"officeName":@"Office 2",
+                                      @"hallName":@"Hall 2",
+                                      NSStrikethroughStyleAttributeName:@(NSUnderlineStyleNone)};
+      
+      
+      [userOwnBookingDataSource addObject:bookingEntry1];
+      [userOwnBookingDataSource addObject:bookingEntry2];
+    }
+    
+    - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+    {
+      return [userOwnBookingDataSource count];
+    }
+    
+    - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+    {
+      UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"booking"];
+      if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"booking"];
+      }
+      NSDictionary *booking = userOwnBookingDataSource[indexPath.row];
+      NSDictionary *bookingStringAttributes = @{NSStrikethroughStyleAttributeName:booking[NSStrikethroughStyleAttributeName]};
+      NSAttributedString *bookingOffice = [[NSAttributedString alloc] initWithString:booking[@"officeName"]
+                                                                        attributes:bookingStringAttributes];
+      NSAttributedString *bookingHall = [[NSAttributedString alloc] initWithString:booking[@"hallName"]
+                                                                        attributes:bookingStringAttributes];
+    
+      [[cell textLabel] setAttributedText:bookingOffice];
+      [[cell detailTextLabel] setAttributedText:bookingHall];
+      return cell;
+    }
+
+If you want to support iOS 5 you will have to use a custom UITableViewCell where you handle the drawing with CoreText from `drawRect:` in a subview.
+
+For more information about using literals for NSDictionaries and NSArrays [here][1]
+
+
+  [1]: http://club15cc.com/media/2012/08/Objective-C-Object-Literals-Quick-Reference.pdf

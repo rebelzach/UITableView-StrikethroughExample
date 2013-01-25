@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		027A344116B293D5004D01BC /* answer in Resources */ = {isa = PBXBuildFile; fileRef = 027A344016B293D5004D01BC /* answer */; };
 		02D90A0E16B261D9002F0CC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D90A0D16B261D9002F0CC2 /* UIKit.framework */; };
 		02D90A1016B261D9002F0CC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D90A0F16B261D9002F0CC2 /* Foundation.framework */; };
 		02D90A1216B261D9002F0CC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D90A1116B261D9002F0CC2 /* CoreGraphics.framework */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		027A344016B293D5004D01BC /* answer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = answer; sourceTree = "<group>"; };
 		02D90A0916B261D9002F0CC2 /* tabletest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabletest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D90A0D16B261D9002F0CC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		02D90A0F16B261D9002F0CC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,6 +87,7 @@
 			children = (
 				02D90A1C16B261D9002F0CC2 /* TTAppDelegate.h */,
 				02D90A1D16B261D9002F0CC2 /* TTAppDelegate.m */,
+				027A344016B293D5004D01BC /* answer */,
 				02D90A2516B261D9002F0CC2 /* TTViewController.h */,
 				02D90A2616B261D9002F0CC2 /* TTViewController.m */,
 				02D90A2816B261D9002F0CC2 /* TTViewController.xib */,
@@ -137,7 +140,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Rebelzach;
 			};
-			buildConfigurationList = 02D90A0316B261D9002F0CC2 /* Build configuration list for PBXProject "tabletest" */;
+			buildConfigurationList = 02D90A0316B261D9002F0CC2 /* Build configuration list for PBXProject "TableTest" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -164,6 +167,7 @@
 				02D90A2216B261D9002F0CC2 /* Default@2x.png in Resources */,
 				02D90A2416B261D9002F0CC2 /* Default-568h@2x.png in Resources */,
 				02D90A2A16B261D9002F0CC2 /* TTViewController.xib in Resources */,
+				027A344116B293D5004D01BC /* answer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +281,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02D90A0316B261D9002F0CC2 /* Build configuration list for PBXProject "tabletest" */ = {
+		02D90A0316B261D9002F0CC2 /* Build configuration list for PBXProject "TableTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02D90A2B16B261D9002F0CC2 /* Debug */,
@@ -293,6 +297,7 @@
 				02D90A2F16B261D9002F0CC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
