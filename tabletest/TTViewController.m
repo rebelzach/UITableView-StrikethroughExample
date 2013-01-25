@@ -8,10 +8,6 @@
 
 #import "TTViewController.h"
 
-@interface TTViewController ()
-
-@end
-
 @implementation TTViewController {
   NSMutableArray *userOwnBookingDataSource;
 }
